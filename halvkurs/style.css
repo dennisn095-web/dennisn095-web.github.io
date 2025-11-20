@@ -7,6 +7,11 @@ header, main, footer, nav, div{
 
 }
 
+*{
+    scroll-behavior: smooth;
+
+}
+
 .Rubrik{
     text-align: center;
     
@@ -20,7 +25,11 @@ main{
 
 .cards{
     min-height: 40vh;
+    
 }
+
+ 
+
 
 
 
