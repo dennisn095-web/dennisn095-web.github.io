@@ -14,11 +14,14 @@ header, main, footer, nav, div{
 
 main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .cards{
     min-height: 40vh;
 }
+
+
 
 
