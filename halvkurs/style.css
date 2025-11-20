@@ -1,8 +1,24 @@
-header, main, footer{
+header, main, footer, nav, div{
     border: 1px solid black;
     margin: 0%;
     padding: 3%;
     box-sizing: border-box;
     min-height: 5vh;
+
 }
+
+.Rubrik{
+    text-align: center;
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cards{
+    min-height: 40vh;
+}
+
 
