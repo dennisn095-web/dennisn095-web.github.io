@@ -1,0 +1,8 @@
+header, main, footer{
+    border: 1px solid black;
+    margin: 0%;
+    padding: 3%;
+    box-sizing: border-box;
+    min-height: 5vh;
+}
+
