@@ -1,5 +1,5 @@
-header, main, footer, nav, div{
-    border: 1px solid black;
+header, main, footer,.Rubrik, section, div{
+    border: 1px solid white;
     margin: 0%;
     padding: 3%;
     box-sizing: border-box;
@@ -9,7 +9,9 @@ header, main, footer, nav, div{
 
 *{
     scroll-behavior: smooth;
-
+    text-decoration: none;
+    color: white;
+    background-color:black ;
 }
 
 .Rubrik{
@@ -24,13 +26,28 @@ main{
 }
 
 .cards{
-    min-height: 40vh;
-    
+
+    padding: 0%;
+    display: block;
+
 }
 
- 
+a, .imgBox{
+    padding: 0%;
+}
+
+.imgBox{
+
+    overflow: hidden;
+}
 
 
-
+/* css för bilder som ligger i låda med klass imgBox */
+.imgBox img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+    
 
 
