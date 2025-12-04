@@ -1,5 +1,5 @@
-header, main, footer,.Rubrik, section, div{
-    border: 1px solid white;
+header, main, footer,.Rubrik, div{
+    
     margin: 0%;
     padding: 3%;
     box-sizing: border-box;
@@ -50,4 +50,19 @@ a, .imgBox{
 }
     
 
+.pris, section{
+    text-align: center;
+    padding: 0;
+    min-height: 2vh;
 
+}
+
+footer,h3,h2,h4{
+    
+    color: black;
+    background-color: rgb(176, 55, 55);
+    
+}
+h1,h2,h4{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
