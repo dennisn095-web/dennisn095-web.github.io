@@ -3,3 +3,25 @@ border: 1px solid black;
 min-height: 10vh;
 padding: 4%;
 }
+
+header, main, footer{
+border: 1px solid black;
+min-height: 10vh;
+padding: 4%;
+}
+
+
+*{
+    text-align: center;
+}
+
+.imgBox img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imgBox{
+
+    overflow: hidden;
+}
