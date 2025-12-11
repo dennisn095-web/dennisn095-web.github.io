@@ -37,7 +37,7 @@ a, .imgBox{
 }
 
 .imgBox{
-
+aspect-ratio: 1/1;
     overflow: hidden;
 }
 
