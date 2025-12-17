@@ -4,7 +4,14 @@ header, main, footer,.Rubrik, div{
     padding: 3%;
     box-sizing: border-box;
     min-height: 5vh;
+    border: solid white 1px;
 
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
 }
 
 *{
@@ -37,7 +44,7 @@ a, .imgBox{
 }
 
 .imgBox{
-aspect-ratio: 1/1;
+aspect-ratio: 17/16;
     overflow: hidden;
 }
 
