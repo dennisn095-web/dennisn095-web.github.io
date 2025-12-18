@@ -11,7 +11,7 @@ header, main, footer,.Rubrik, div{
 .menu{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+
 }
 
 *{
@@ -19,12 +19,10 @@ header, main, footer,.Rubrik, div{
     text-decoration: none;
     color: white;
     background-color:black ;
+    text-align: center;
 }
 
-.Rubrik{
-    text-align: center;
-    
-}
+
 
 main{
     display: grid;
