@@ -4,7 +4,7 @@ header, main, footer, div{
     padding: 3%;
     box-sizing: border-box;
     min-height: 5vh;
-    border: solid white 1px;
+ 
 
 }
 
@@ -46,6 +46,10 @@ aspect-ratio: 1/1;
 }
 
 
+.menu, header,a,.RubrikMenu{
+    background-color:rgb(176, 55, 55); ;
+}
+
 .indexMain{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,7 +57,7 @@ aspect-ratio: 1/1;
 }
 
 
-.rubrik{
+.RubrikMenu{
     text-align: center;
 }
 
@@ -63,7 +67,7 @@ aspect-ratio: 1/1;
 
 }
 
-footer,h3,h2,.mail{
+h2,.mail{
     
     color: black;
     background-color: rgb(176, 55, 55);
@@ -71,7 +75,12 @@ footer,h3,h2,.mail{
   
 }
 
-
+.index,footer,.menulink,.RubrikMenu{
+    
+    color: black;
+    background-color: rgb(176, 55, 55);
+    
+}
 
 
 
