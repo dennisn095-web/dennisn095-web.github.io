@@ -75,6 +75,16 @@ h2,.mail{
   
 }
 
+
+
+
+header button{
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+}
+
+
 .index,footer,.menulink,.RubrikMenu{
     
     color: black;
@@ -138,4 +148,14 @@ h2,.mail{
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     }
+}
+
+
+
+
+
+/* Togglade klasser */
+.hidden{
+    display: none;
+
 }
