@@ -143,13 +143,19 @@ header button{
 
 
 @media(min-width:600px){
+
+
+    button{
+    display: none;
+    }   
+
+
     main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     }
 }
-
 
 
 
