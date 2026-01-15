@@ -6,9 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        header{
-            text-align: center;
-        }
+
         footer{
         background-color: black;
         }
@@ -21,7 +19,9 @@
 
         <a href="/halvkurs/index.html"><h1 class="RubrikMenu">GLUP</h1></a>
 
-            <div class="menu"> 
+        <button onclick="toggleMenu()" >&equiv;</button>
+
+            <nav class="menu"> 
 
                 <a class="menulink" href="/halvkurs/index.html">HEM</a>
 
@@ -29,7 +29,7 @@
 
                 <a class="menulink" href="/halvkurs/faq.html">FAQ</a>
 
-    </div>
+            </nav>
 </header>
 
 
@@ -45,7 +45,19 @@
             <h4>Det perfekta glaset för den perfekta drycken. </h4>
             <h4>*Placera glasen bredvid flaskan i frysen för den absolut kallaste upplevelsen! </h4>
         </main>
-<footer></footer>
+<footer>
+
+        <script>
+
+         function toggleMenu(){
+            
+            document.querySelector(".menu").classList.toggle("show");
+        
+        }
+
+
+    </script>
+</footer>
 
 
 </body>

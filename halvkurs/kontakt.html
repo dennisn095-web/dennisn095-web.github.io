@@ -18,7 +18,9 @@
 
         <a href="/halvkurs/index.html"><h1 class="RubrikMenu">GLUP</h1></a>
 
-            <div class="menu"> 
+        <button onclick="toggleMenu()" >&equiv;</button>
+
+            <nav class="menu"> 
 
                 <a class="menulink" href="/halvkurs/index.html">HEM</a>
 
@@ -26,7 +28,7 @@
 
                 <a class="menulink" href="/halvkurs/faq.html">FAQ</a>
 
-    </div>
+            </nav>
 
     </header>
 
@@ -40,7 +42,19 @@
         </div>
     </main>
  
-    <footer></footer>
+    <footer>
+
+            <script>
+
+         function toggleMenu(){
+            
+            document.querySelector(".menu").classList.toggle("show");
+        
+        }
+
+
+    </script>
+    </footer>
     
 </body>
 </html>
