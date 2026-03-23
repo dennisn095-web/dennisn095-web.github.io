@@ -1,0 +1,11 @@
+header,main, footer,div{
+    border: solid black 1px;
+    margin: 0%;
+    padding: 3%;
+    min-height: 20vh;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+}
