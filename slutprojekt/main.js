@@ -8,13 +8,50 @@ const cars = [
 
     return(
 
-        <div>
+        <>
+            <Header></Header>
+            
+        </>
 
-dedededed
-
-        </div>
     )
 
 
 
 }
+
+
+
+function Header(){
+    return(
+
+        <header> 
+            <nav>
+                    
+            </nav>
+        </header>
+    )
+}
+
+
+function Main(){
+    <main>
+        <div>
+        
+        </div>
+    </main>
+}
+
+
+function Footer(){
+
+    return(
+        <footer>
+            <div>
+
+            </div>
+        </footer>
+    )
+
+}
+
+

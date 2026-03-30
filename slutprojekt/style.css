@@ -1,4 +1,4 @@
-main, footer,div{
+main, footer,div,nav, header{
     border: solid black 1px;
     margin: 0%;
     padding: 3%;
@@ -9,3 +9,27 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
 }
+
+
+
+/* .imgBox{
+  width:200px;
+  aspecti-ratio:3 / 5;
+  overflow:hidden;
+  display:grid;
+  grid-template-areas: 'main';
+}
+
+.imgBox>*{
+  grid-area:main;
+}
+
+.imgBox img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.imgBox img:first-of-type{
+
+} */
