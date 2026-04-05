@@ -1,14 +1,35 @@
-main, footer,div,nav, header{
+main, footer,nav, div,header{
     border: solid black 1px;
     margin: 0%;
     padding: 3%;
     min-height: 20vh;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+header h1, header{
+  text-align: center;
+  background-color: rgb(200, 17, 17);
+
 }
+header h1{
+  color: yellow;
+}
+header h2{
+  color: white;
+}
+
+
+
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+
+
+
 
 
 

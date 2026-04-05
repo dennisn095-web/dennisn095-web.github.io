@@ -1,8 +1,22 @@
 ReactDOM.createRoot(document.querySelector('#root')).render(<App></App>);
 
+/*
+import cards from './151'
+
+function PokemonCard ({id,name}){
+    return(
+
+        <div className= 'card'>
+        <img src={cards[id]} alt={name} ></img>
+        <p>{name}</p>
+        </div>
+    )
+}
+*/
+
 function App(){
 
-const cars = [
+const cards = [
 
 ];
 
@@ -11,7 +25,16 @@ const cars = [
         <>
             <Header></Header>
             
+            <Main>
+                <Div></Div>
+                <Div></Div>
+                <Div></Div>
+                <Div></Div>
+                <Div></Div>
+            </Main>
+            
         </>
+    
 
     )
 
@@ -25,20 +48,34 @@ function Header(){
     return(
 
         <header> 
-            <nav>
-                    
-            </nav>
+            <h1>
+                Pokemon
+            </h1>
+            <h2>
+                1st generation 151 cards
+            </h2>
+
         </header>
     )
 }
 
 
 function Main(){
-    <main>
-        <div>
+    return(
+        <main>
         
-        </div>
+
     </main>
+    )
+    
+}
+
+function Div(){
+    return(
+        <div>
+                
+        </div>
+    )
 }
 
 
