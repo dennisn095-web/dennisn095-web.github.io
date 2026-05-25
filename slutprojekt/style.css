@@ -1,9 +1,11 @@
-main, footer,nav, div,header{
+main, footer,nav,header{
     border: solid black 1px;
     margin: 0%;
     padding: 3%;
     min-height: 20vh;
 }
+
+
 
 header h1, header{
   text-align: center;
@@ -22,35 +24,130 @@ header h2{
 
 main{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  
 }
 
-
-
-
-
-
-
-
-
-/* .imgBox{
-  width:200px;
-  aspecti-ratio:3 / 5;
-  overflow:hidden;
-  display:grid;
-  grid-template-areas: 'main';
-}
-
-.imgBox>*{
-  grid-area:main;
-}
 
 .imgBox img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
 }
 
-.imgBox img:first-of-type{
+.box{
+  padding: 3%;
+}
+
+
+.hidden{
+  display: none;
+}
+
+
+input{
+  min-height: 10vh;
+  min-width: 40vh;
+}
+
+.kontakt{
+display: grid;
+text-align: center;
+}
+
+
+.moreInfo{
+  position: fixed;
+  top: 0px;
+  width:100%;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  left:0;
+
+}
+
+/* /* .moreInfo h1{
+  display: flex;
+  justify-content: center;
+}
+
+.infoBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: solid black 1px;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
 
 } */
+
+/* .ability{
+  border: solid black 3px;
+  height: 50vh;
+  width: 23vw;
+}    */
+
+
+.menu {
+  display: none;          /* dold som standard */
+  position: relative;
+  border: solid black 1px;
+  padding: 3%;
+  margin-bottom: 1rem;
+
+  
+}
+.menu.show {
+  display: block;         /* visas när show är satt */
+  display: grid;
+  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+}
+
+footer{
+  min-height: 10vh;
+}
+
+
+
+
+@media(max-width:600px){
+
+
+
+    main{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    .menu.show {
+      display: block;         /* visas när show är satt */
+      display: grid;
+      grid-template-columns: 1fr;
+      display: flex;  
+      justify-content: center;
+}
+
+.imgBoxMenu{
+  width: 40%;
+  height: 100%;
+
+}
+
+.imgBoxMenu img{
+  display: block;
+  
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+}
+
+/* .ability{
+  border: solid black 3px;
+height: 200px;
+}    */
+}
+

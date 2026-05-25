@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:20%;
+        }
+        #big{
+            display:block;
+            width:40%;
+        }
+    </style>
+</head>
+<body>
+
+    <img onclick="show()" src="151/SV3pt5_EN_1.png" alt="">
+    <img onclick="show()" src="151/SV3pt5_EN_2.png" alt="">
+    <img onclick="show()" src="151/SV3pt5_EN_3.png" alt="">
+    
+
+    <img src="" alt="" id="big">
+
+    <script>
+        function show(){
+            // window.event.target är det element som du klickade på
+            console.log(window.event.target.src)
+            document.querySelector("#big").src = window.event.target.src
+        }
+    </script>
+</body>
+</html>
