@@ -350,17 +350,36 @@ function App() {
 
 
 function Header() {
+        const [more, setMore] = React.useState(false);
+
+    function showMore() {
+        setMore(prev => !prev)
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // ← lägg till
+    }
+    
     return (
-
-        <header onClick={toggl} style={{ cursor: "pointer" }}>
-
-            <h1>
+        <>
+        <header>
+            <div className="top" onClick={toggl} style={{ cursor: "pointer" }}>
+                <h1>
                 Pokemon
             </h1>
             <h2>
                 1st generation 151 cards
             </h2>
+            </div>
+            
+            <div className="saker" onClick={toggl} style={{ cursor: "pointer" }}>
+             <h2 className="home" onClick={toggl} style={{cursor: 'pointer'}} > HOME</h2>
+             <h2 className="about">ABOUT</h2>
+             <h2 className="kontakt"  onClick={showMore} style={{ cursor: "pointer" }} >KONTAKT</h2>
+             </div>
+
+
         </header>
+
+       {more ? <More showMore={showMore}/> : ""}
+        </>
     )
 }
 
@@ -372,9 +391,11 @@ function Header() {
 
 
 function toggleMenu() {
-  document.querySelector(".menu").classList.add("show");
-  document.querySelector(".imgBoxMenu img").src = window.event.target.src;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    const box = window.event.target.closest(".box"); // ← hitta föräldern .box
+    const img = box.querySelector("img");
+    document.querySelector(".menu").classList.add("show");
+    document.querySelector(".imgBoxMenu img").src = img.src;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function toggl(){
     document.querySelector(".menu").classList.remove("show");
@@ -477,6 +498,7 @@ function Footer(){
         
 
 function More(props) {
+    
     return (
 
         <>
