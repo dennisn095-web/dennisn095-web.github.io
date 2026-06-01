@@ -350,12 +350,27 @@ function App() {
 
 
 function Header() {
-        const [more, setMore] = React.useState(false);
+    const [more, setMore] = React.useState(false);
+    const [about, setAbout] = React.useState(false); // ← lägg till
 
     function showMore() {
         setMore(prev => !prev)
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // ← lägg till
+        toggl()
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    function showAbout() {          // ← lägg till
+        setAbout(prev => !prev)
+        toggl()
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showHome() {
+    setMore(false);
+    setAbout(false);
+    toggl();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
     
     return (
         <>
@@ -369,16 +384,19 @@ function Header() {
             </h2>
             </div>
             
-            <div className="saker" onClick={toggl} style={{ cursor: "pointer" }}>
+            <div className="saker" >
              <h2 className="home" onClick={toggl} style={{cursor: 'pointer'}} > HOME</h2>
-             <h2 className="about">ABOUT</h2>
+             <h2 className="about" onClick={showAbout} style={{cursor: 'pointer'}}>ABOUT</h2>
              <h2 className="kontakt"  onClick={showMore} style={{ cursor: "pointer" }} >KONTAKT</h2>
              </div>
 
 
         </header>
 
-       {more ? <More showMore={showMore}/> : ""}
+    {more  ? <More  showMore={showMore}  showAbout={showAbout} showHome={showHome}/> : ""}
+    {about ? <About showAbout={showAbout} showMore={showMore}  showHome={showHome}/> : ""}
+
+
         </>
     )
 }
@@ -477,25 +495,85 @@ function Menu(){
 
 function Footer(){
     const [more, setMore] = React.useState(false);
+    const [about, setAbout] = React.useState(false);
 
     function showMore() {
         setMore(prev => !prev)
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // ← lägg till
+        toggl()
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    return(
 
+    function showAbout() {
+        setAbout(prev => !prev)
+        toggl()
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showHome() {
+    setMore(false);
+    setAbout(false);
+    toggl();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+    return(
         <>
         <footer>
             <div>
                 <h1 onClick={showMore} style={{ cursor: "pointer" }}>KONTAKTA OSS</h1>
-        </div>
-        
+            </div>
         </footer>
-        {more ? <More showMore={showMore}/> : ""}
+    {more  ? <More  showMore={showMore}  showAbout={showAbout} showHome={showHome}/> : ""}
+    {about ? <About showAbout={showAbout} showMore={showMore}  showHome={showHome}/> : ""}
         </>
     )
 }
         
+
+function About(props){
+
+    
+    return(
+    
+                <>
+        <div className="moreInfo">
+            <header > {/* ← showAbout */}
+            <div className="headerText" onClick={props.showHome} style={{ cursor: "pointer" }}>
+                <h1>Pokemon</h1>
+                <h2>1st generation 151 cards</h2>
+            </div>
+                <div className="saker">
+                    <h2 className="home" onClick={props.showHome} style={{cursor: 'pointer'}}>HOME</h2>
+                    <h2 className="about"  style={{ cursor: "pointer" }}>ABOUT</h2>
+                    <h2 className="kontakt" onClick={() => { props.showMore(); props.showAbout(); }} style={{cursor: 'pointer'}}>KONTAKT</h2>
+                </div>
+
+            </header>
+            <div className='about'>
+            <h1>FAQ</h1>
+            <h2 className="FAQtext2">Vad är syftet med denna webbplats?</h2>
+            <h4 className="FAQtext">Syftet med webbplatsen är att visa alla 151 Pokémon från första generationen tillsammans med deras kort från Pokémon TCG 151.</h4>
+
+            <h2 className="FAQtext2">Vilka Pokémon finns på sidan?</h2>
+            <h4 className="FAQtext">Alla 151 original Pokémon från generation 1 finns med, från Bulbasaur (#1) till Mew (#151).</h4>
+
+            <h2 className="FAQtext2">Vad kan jag se när jag klickar på ett kort?</h2>
+            <h4 className="FAQtext">När du klickar på ett kort visas en större bild av kortet högst upp på sidan.</h4>
+
+            <h2 className="FAQtext2">Hur söker jag efter en Pokémon?</h2>
+            <h4 className="FAQtext">Använd sökfältet på startsidan och skriv in namnet på den Pokémon du letar efter så filtreras korten automatiskt.</h4>
+
+            <h2 className="FAQtext2">Varifrån kommer korten?</h2>
+            <h4 className="FAQtext">Korten kommer från Pokémon TCG-expansionen SV3pt5 — Scarlet & Violet 151, som släpptes 2023.</h4>
+
+            <h2 className="FAQtext2">Är detta en kommersiell webbplats?</h2>
+            <h4 className="FAQtext">Nej. Webbplatsen är skapad som ett skolprojekt inom webbutveckling och är inte kopplad till försäljning.</h4>
+        </div>
+                </div>
+    
+        </>
+    )
+}
 
 function More(props) {
     
@@ -503,15 +581,20 @@ function More(props) {
 
         <>
         <div className="moreInfo">
-             <header onClick={props.showMore} style={{ cursor: "pointer" }}>
+             <header style={{ cursor: "pointer" }}>
    
-            <h1>
-                Pokemon
-            </h1>
-            <h2>
-                1st generation 151 cards
-            </h2>
-  
+            <div className="headerText" onClick={props.showHome} style={{ cursor: "pointer" }}>
+                <h1>Pokemon</h1>
+                <h2>1st generation 151 cards</h2>
+            </div>
+            
+            <div className="saker" >
+             <h2 className="home" onClick={props.showHome} style={{cursor: 'pointer'}}>HOME</h2>
+             <h2 className="about" onClick={() => { props.showAbout(); props.showMore(); }} style={{cursor: 'pointer'}}>ABOUT</h2>
+             <h2 className="kontakt" style={{ cursor: "pointer" }}>KONTAKT</h2>
+             </div>
+
+
 
         </header>
             <div className='kontakt'>
